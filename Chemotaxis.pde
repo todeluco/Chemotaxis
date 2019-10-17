@@ -16,9 +16,6 @@
  	   	mickeys[i].move();
  	   }
  }  
- void mousePressed(){
- 	redraw();
- }
  class Bacteria    
  {     
  	int myX, myY;
