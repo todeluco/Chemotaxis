@@ -12,8 +12,8 @@
  {    
  	   background(0);
  	   for(int i = 0; i < mickeys.length; i++){
- 	   	mickeys[i].show();
  	   	mickeys[i].move();
+ 	   	mickeys[i].show();
  	   }
  }  
  class Bacteria    
