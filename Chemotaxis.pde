@@ -41,6 +41,7 @@
  		ellipse(myX-8,myY-10,10,20);
  		ellipse(myX,myY+13,45,25);
  		ellipse(myX,myY,15,10);
- 		arc(myX,myY+13,22,33,0,2*PI/2,CHORD);
+ 		arc(myX,myY+13,22,33,0,2*PI/2);
+ 		line(myX-10,myY+13,myX+10,myY+13);
  	}
  }    
