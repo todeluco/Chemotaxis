@@ -3,7 +3,7 @@
  {     
  	size(500,500);
  	frameRate(10);
- 	mickeys = new Bacteria[50];
+ 	mickeys = new Bacteria[20];
  	for(int i = 0; i < mickeys.length; i++){
  		mickeys[i] = new Bacteria();
  	}
@@ -23,11 +23,21 @@
  	Bacteria(){
  		myX = 250;
  		myY = 250;
- 		bacteriaColor = 50;
+ 		bacteriaColor = 0;
  	} 
  	void move(){
- 		myX = myX + (int)(Math.random()*11)-5;
- 		myY = myY + (int)(Math.random()*11)-5;
+ 		//myX = myX + (int)(Math.random()*11)-5;
+ 		//myY = myY + (int)(Math.random()*11)-5;
+ 		if(mouseX > myX){
+ 			myX = myX + (int)(Math.random()*10)-2;
+ 		} else {
+ 			myX = myX + (int)(Math.random()*10)-7;
+ 		}
+ 		if(mouseY > myY){
+ 			myY = myY + (int)(Math.random()*10)-2;
+ 		} else {
+ 			myY = myY + (int)(Math.random()*10)-7;
+ 		}
  	}
  	void show(){
  		fill(bacteriaColor);
