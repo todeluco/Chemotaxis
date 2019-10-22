@@ -1,4 +1,5 @@
  Bacteria[] mickeys;
+ int value = 0;
  void setup()   
  {     
  	size(500,500);
@@ -10,12 +11,19 @@
  }   
  void draw()   
  {    
- 	   background(0);
+ 	   background(value);
  	   for(int i = 0; i < mickeys.length; i++){
  	   	mickeys[i].move();
  	   	mickeys[i].show();
  	   }
  }  
+ void mousePressed(){
+ 	if(value == 0){
+ 		value = 255;
+ 	} else {
+ 		value = 0;
+ 	}
+ }
  class Bacteria    
  {     
  	int myX, myY;
@@ -23,11 +31,9 @@
  	Bacteria(){
  		myX = 250;
  		myY = 250;
- 		bacteriaColor = 0;
+ 		bacteriaColor = value;
  	} 
  	void move(){
- 		//myX = myX + (int)(Math.random()*11)-5;
- 		//myY = myY + (int)(Math.random()*11)-5;
  		if(mouseX > myX){
  			myX = myX + (int)(Math.random()*10)-2;
  		} else {
@@ -40,7 +46,7 @@
  		}
  	}
  	void show(){
- 		fill(bacteriaColor);
+ 		fill(value);
  		stroke((int)(Math.random()*255)+1,
  			   (int)(Math.random()*255)+1,
  			   (int)(Math.random()*255)+1);
